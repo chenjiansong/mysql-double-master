@@ -6,7 +6,7 @@ ENV TZ Asia/Shanghai
 
 # Set TERM env to avoid mysql client error message "TERM environment variable not set" when running from inside the container
 ENV TERM xterm
-#RUN export http_proxy=http://16.216.235.20:8080 && export https_proxy=http://16.216.235.20:8080 \
+# RUN export http_proxy=http://16.216.235.20:8080 && export https_proxy=http://16.216.235.20:8080 \
 
 # install percona-xtrabackup
 RUN && apt-get update -y && apt-get install -y wget lsb-release vim curl net-tools \

@@ -9,7 +9,7 @@ ENV TERM xterm
 # RUN export http_proxy=http://16.216.235.20:8080 && export https_proxy=http://16.216.235.20:8080 \
 
 # install percona-xtrabackup
-RUN && apt-get update -y && apt-get install -y wget lsb-release vim curl net-tools \
+RUN apt-get update -y && apt-get install -y wget lsb-release vim curl net-tools \
     && wget https://repo.percona.com/apt/percona-release_0.1-4.$(lsb_release -sc)_all.deb \
     && dpkg -i percona-release_0.1-4.$(lsb_release -sc)_all.deb \
     && apt-get update -y && apt-get install -y --force-yes percona-xtrabackup-24 && apt-get install -y pmm-client \
